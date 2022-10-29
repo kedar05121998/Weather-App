@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            background-image: url("https://wonderfulengineering.com/wp-content/uploads/2014/06/earth-wallpapers-39.jpg");
+        }
+            .gmap_canvas {
+            overflow:hidden;
+            /* background:none!important; */
+            height:450px;
+            width:600px;
+            margin-left: 600px;
+            position: fixed;
+            margin-top: 70px;
+            border-radius: 20px;
+        }
+        #container>div{
+            margin-top: 100px;
+            position: fixed;
+            justify-content: space-evenly;
+            height: 600px;
+            width: 300px;
+            margin-left: 100px;
+            color: antiquewhite;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            /* background-color: rgb(123, 123, 211); */
+
+        }
+        #query
+        {
+            height: 30px;
+            width: 300px;
+            border-radius: 20px;
+           margin-left: 450px;
+           color: antiquewhite;
+           border: 1px solid white;
+           font-size: 20px;
+           font-weight: bold;
+        
+        }
+        #btn{
+            height: 30px;
+            cursor: pointer;
+            color:white;
+            font-weight: bold;
+         
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 style="text-align: center; color: white; background: none;" >Welcome to Weather App</h1>
+
+    <input type="text" id="query" placeholder="Enter City name" >
+
+    <button id="btn" onclick="getData()"  >submit</button>
+
+    <div id="container" ></div>
+
+    <div id="right">
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="600" 
+                height="500" 
+                margin-left="800"
+                id="gmap_canvas" 
+                src="https://maps.google.com/maps?q=jalgaon&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                frameborder="0" 
+                scrolling="no"
+                 marginheight="0"
+                  marginwidth="0">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script src="index.js"></script>
